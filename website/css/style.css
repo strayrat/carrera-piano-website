@@ -1,0 +1,411 @@
+/* ======================
+   カレラピアノの会 - スタイル
+   JIMDOサイトのデザインを再現
+   ====================== */
+
+:root {
+  --color-text: #fff;
+  --color-text-dark: #333;
+  --color-accent: #7cb8d9;
+  --color-link: #aad4ec;
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-white: #fff;
+  --font-body: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Noto Serif JP", Georgia, serif;
+  --max-width: 780px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: 16px;
+  background: #1a1510 url("../img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Header / Nav --- */
+
+header {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-white);
+  font-weight: 700;
+}
+.site-title a {
+  color: inherit;
+}
+.site-title a:hover {
+  text-decoration: none;
+}
+
+.site-subtitle {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+nav a:hover,
+nav a.active {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* --- Language switcher --- */
+
+.lang-switch {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.lang-switch a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.lang-switch a:hover,
+.lang-switch .current {
+  color: var(--color-white);
+}
+
+/* --- Main content --- */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* --- Hero / Logo (top page) --- */
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .logo {
+  max-width: 400px;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+/* --- Decorative bar image --- */
+
+.deco-bar {
+  width: 100%;
+  max-width: var(--max-width);
+  display: block;
+  margin: 2rem auto;
+  border-radius: 4px;
+}
+
+/* --- Sections --- */
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-white);
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--color-accent);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Card grid (top page) --- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card .icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card a.card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+/* --- Event info box --- */
+
+.event-box {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.event-box h2 {
+  border-bottom: none;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.event-box .date {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--color-white);
+}
+
+.event-box .venue {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.event-box .note {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Concert history table --- */
+
+.concert-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.concert-list th,
+.concert-list td {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.concert-list th {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+}
+
+.concert-list td {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- About page --- */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 0.3rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.info-grid dt {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.info-grid dd {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Contact form --- */
+
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 1.2rem;
+  padding: 0.7rem 2rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.contact-form button:hover {
+  opacity: 0.85;
+}
+
+/* --- details/summary --- */
+
+details {
+  margin-top: 0.5rem;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+/* --- Footer --- */
+
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer nav {
+  margin-bottom: 0.5rem;
+}
+footer nav ul {
+  justify-content: center;
+  gap: 1rem;
+}
+footer nav a {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+footer nav a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  .hero .logo {
+    max-width: 280px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .concert-list th:nth-child(3),
+  .concert-list td:nth-child(3) {
+    display: none;
+  }
+}
