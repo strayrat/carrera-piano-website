@@ -349,6 +349,13 @@ p {
   opacity: 0.85;
 }
 
+/* --- PDF links --- */
+
+.pdf-link {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
 /* --- Program lists --- */
 
 .program {
