@@ -349,6 +349,31 @@ p {
   opacity: 0.85;
 }
 
+/* --- Program lists --- */
+
+.program {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.program h4 {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 1rem 0 0.3rem;
+  font-weight: 700;
+}
+
+.program ul {
+  list-style: none;
+  padding: 0;
+}
+
+.program li {
+  padding: 0.2rem 0;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 /* --- details/summary --- */
 
 details {
