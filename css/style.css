@@ -118,6 +118,7 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* --- Hero / Logo (top page) --- */
@@ -168,7 +169,7 @@ h2 {
 h3 {
   font-size: 1.05rem;
   margin: 1.5rem 0 0.5rem;
-  color: var(--color-accent);
+  color: var(--color-white);
 }
 
 p {
@@ -224,15 +225,34 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
   background: rgba(0, 0, 0, 0.3);
+}
+
+.new-badge {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-right: 0.3rem;
 }
 
 .event-box h2 {
   border-bottom: none;
-  color: var(--color-accent);
+  color: var(--color-white);
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.event-box .card-link {
+  display: block;
+  text-align: center;
 }
 
 .event-box .date {
@@ -349,38 +369,6 @@ p {
   opacity: 0.85;
 }
 
-/* --- PDF links --- */
-
-.pdf-link {
-  font-size: 0.85rem;
-  color: var(--color-accent);
-}
-
-/* --- Program lists --- */
-
-.program {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.program h4 {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 1rem 0 0.3rem;
-  font-weight: 700;
-}
-
-.program ul {
-  list-style: none;
-  padding: 0;
-}
-
-.program li {
-  padding: 0.2rem 0;
-  color: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
 /* --- details/summary --- */
 
 details {
@@ -399,6 +387,7 @@ footer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
   text-align: center;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.4);
