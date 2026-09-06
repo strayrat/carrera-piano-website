@@ -379,6 +379,13 @@ main li {
   opacity: 0.85;
 }
 
+/* --- Program list (concerts) --- */
+
+.program-list {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
 /* --- details/summary --- */
 
 details {
